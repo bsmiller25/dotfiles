@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for f in .bashrc .emacs
+do
+  rm -f $HOME/$f
+  ln -s $HOME/dotfiles/$f $HOME/$f
+done
