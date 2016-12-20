@@ -52,5 +52,3 @@
 (set-face-foreground 'font-lock-builtin-face "Red")
 
 
-; python setup
-(setq python-python-command "/opt/rh/anaconda/root/envs/PUI2016_Python2/bin/python")
