@@ -21,6 +21,9 @@ fi
 # environmental variables
 #export TEST='this is a test'
 
-# alias
 
+# added by Anaconda3 4.2.0 installer
+export PATH="/opt/anaconda3/bin:$PATH"
+
+# alias
 

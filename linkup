@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for f in .bashrc .emacs
+for f in .bashrc .emacs.d
 do
   rm -f $HOME/$f
   ln -s $HOME/dotfiles/$f $HOME/$f
