@@ -2,6 +2,6 @@
 
 for f in .bashrc .emacs.d
 do
-  rm -f $HOME/$f
+  rm -rf $HOME/$f
   ln -s $HOME/dotfiles/$f $HOME/$f
 done
