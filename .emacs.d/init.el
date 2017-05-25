@@ -43,7 +43,7 @@
 (setq diff-switches "-u")
 
 ;; ;; always end a file with a newline
-(setq require-final-newline 'query)
+;;(setq require-final-newline 'query)
 
 ;; Don't start emacs at the default screen
 (setq inhibit-startup-screen t)
@@ -64,7 +64,7 @@
 (set-face-attribute 'default nil :height 130)
 
 ;; show line numbers everywhere
-(global-linum-mode t)
+;;(global-linum-mode t)
 
 ;; cuspish colors
 ;;(set-face-background 'default "white smoke")
