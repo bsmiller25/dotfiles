@@ -57,11 +57,29 @@
 ;; make switch buffers give me list of available buffers
 (ido-mode 1)
 
+;; multiple cursors
+;; http://melpa.org/#/multiple-cursors
+;; may need to manually install
+;; M-x install-packages multiple-cursors
+;; or
+;; M-x list-packages
+;; search for multiple-cursors and click to install
+(require 'multiple-cursors)
+
 ;; keybindings
-;(global-set-key (kbd "<f1>") 'find-file)
-;(global-set-key (kbd "<f2>") 'save-buffer)
-;(global-set-key (kbd "S-<f2>") 'write-file)
-;(global-set-key (kbd "<f3>") 'kill-buffer)
+
+;; terminal
+(global-set-key (kbd "<f1>") 'ansi-term)
+
+;; multiple cursors
+;; add cursor to all lines in selected region
+(global-set-key (kbd "C-c C-m") 'mc/edit-lines)
+
+;; add cursors based on keywords
+(global-set-key (kbd "C-c >") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-c <") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-a") 'mc/mark-all-like-this)
+
 
 ;; Increase the default text size
 (set-face-attribute 'default nil :height 130)
