@@ -24,7 +24,7 @@
       (package-install package)))
       myPackages)
 
-(load-theme 'material t)
+;;(load-theme 'material t)
 (elpy-enable)
 
 ;; use flycheck not flymake with elpy
@@ -49,7 +49,7 @@
 (setq inhibit-startup-screen t)
 
 ;; start emacs at the shell terminal emulator
-(switch-to-buffer (get-buffer-create (shell)))
+;;(switch-to-buffer (get-buffer-create (shell)))
 
 ;; make switch buffers give me list of available buffers
 (ido-mode 1)
