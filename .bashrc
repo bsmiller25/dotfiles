@@ -1,6 +1,6 @@
 # .bashrc
 
-# enable color support of ls and also add handy aliases
+# enable color support of ls and also add aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
@@ -14,15 +14,17 @@ fi
 
 force_color_prompt=yes
 
+# User specific aliases and functions
+# environmental variables
+export TERM=xterm-256color
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-# User specific aliases and functions
-# environmental variables
-#export TEST='this is a test'
-export TERM=xterm-256color
+# Source local definitions
+if [ -f ~/.bashrc_local ]; then
+    . ~/.bashrc_local
+fi
 
-# added by Anaconda3 4.2.0 installer
-export PATH="/home/ben/anaconda3/bin:$PATH"
