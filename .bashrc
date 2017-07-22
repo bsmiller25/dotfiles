@@ -14,9 +14,6 @@ fi
 
 force_color_prompt=yes
 
-# User specific aliases and functions
-# environmental variables
-export TERM=xterm-256color
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then

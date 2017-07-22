@@ -26,6 +26,9 @@
 
 ;;(load-theme 'material t)
 (elpy-enable)
+;;(elpy-use-ipython)
+;;(setenv "IPY_TEST_SIMPLE_PROMPT" "1")
+;;(ansi-color-for-comint-mode-on)
 
 ;; use flycheck not flymake with elpy
 ;;(when (require 'flycheck nil t)
