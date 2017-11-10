@@ -24,9 +24,9 @@
       (package-install package)))
       myPackages)
 
-;;(load-theme 'material t)
+(load-theme 'material t)
 (elpy-enable)
-;;(elpy-use-ipython)
+(elpy-use-ipython)
 ;;(setenv "IPY_TEST_SIMPLE_PROMPT" "1")
 ;;(ansi-color-for-comint-mode-on)
 
