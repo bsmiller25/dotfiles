@@ -2,6 +2,8 @@
 
 ;; --------------------------------------
 
+(setq inhibit-startup-screen t)
+
 (require 'package)
 
 (add-to-list 'package-archives
@@ -49,26 +51,13 @@
 
 ;; multiple cursors
 ;; add cursor to all lines in selected region
-(global-set-key (kbd "C-c C-m") 'mc/edit-lines)
+;;(global-set-key (kbd "C-c C-m") 'mc/edit-lines)
 
 ;; add cursors based on keywords
-(global-set-key (kbd "C-c >") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-c <") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-a") 'mc/mark-all-like-this)
+;;(global-set-key (kbd "C-c >") 'mc/mark-next-like-this)
+;;(global-set-key (kbd "C-c <") 'mc/mark-previous-like-this)
+;;(global-set-key (kbd "C-c C-a") 'mc/mark-all-like-this)
 
 
 ;;show line numbers everywhere
 ;;global-linum-mode t)
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(inhibit-startup-screen t))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
