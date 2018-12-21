@@ -33,6 +33,9 @@
 ;; make switch buffers give me list of available buffers
 (ido-mode 1)
 
+;; inhibit welcome screen
+(setq inhibit-startup-screen t)
+
 ;; multiple cursors
 ;; http://melpa.org/#/multiple-cursors
 ;; may need to manually install
@@ -40,7 +43,7 @@
 ;; or
 ;; M-x list-packages
 ;; search for multiple-cursors and click to install
-(require 'multiple-cursors)
+;;(require 'multiple-cursors)
 
 ;; keybindings
 
