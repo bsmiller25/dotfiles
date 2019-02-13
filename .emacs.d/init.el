@@ -15,18 +15,35 @@
 
 (defvar myPackages
   '(better-defaults
-    ein
     elpy
     flycheck
     material-theme
-    py-autopep8))
+    py-autopep8
+    ))
 
 (mapc #'(lambda (package)
     (unless (package-installed-p package)
       (package-install package)))
       myPackages)
 
+;; load the material theme
 (load-theme 'material t)
+
+;; enable elpy
+(elpy-enable)
+
+;; auto pep8
+(require 'py-autopep8)
+(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
+(setq py-autopep8-options '("--max-line-length=79"))
+
+;; flycheck
+(when (require 'flycheck nil t)
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
+
+
+(elpy-use-ipython)
 
 ;; ;; enable visual feedback on selections
 (setq transient-mark-mode t)
@@ -35,26 +52,22 @@
 ;; make switch buffers give me list of available buffers
 (ido-mode 1)
 
-;; multiple cursors
-;; http://melpa.org/#/multiple-cursors
-;; may need to manually install
-;; M-x install-packages multiple-cursors
-;; or
-;; M-x list-packages
-;; search for multiple-cursors and click to install
-;;(require 'multiple-cursors)
-
-;; keybindings
-
-;; multiple cursors
-;; add cursor to all lines in selected region
-;;(global-set-key (kbd "C-c C-m") 'mc/edit-lines)
-
-;; add cursors based on keywords
-;;(global-set-key (kbd "C-c >") 'mc/mark-next-like-this)
-;;(global-set-key (kbd "C-c <") 'mc/mark-previous-like-this)
-;;(global-set-key (kbd "C-c C-a") 'mc/mark-all-like-this)
+;; fix html indentation
+(add-hook 'html-mode-hook
+	  (lambda ()
+	    ;; Default indentation is usually 2 spaces, changing to 4.
+	    (set (make-local-variable 'sgml-basic-offset) 4)))
 
 
-;;show line numbers everywhere
-;;global-linum-mode t)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (material-theme elpy better-defaults))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
