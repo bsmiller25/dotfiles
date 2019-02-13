@@ -43,8 +43,6 @@
   (add-hook 'elpy-mode-hook 'flycheck-mode))
 
 
-(elpy-use-ipython)
-
 ;; ;; enable visual feedback on selections
 (setq transient-mark-mode t)
 
