@@ -17,8 +17,8 @@
   '(better-defaults
     elpy
     flycheck
-    material-theme
     py-autopep8
+    web-mode
     ))
 
 (mapc #'(lambda (package)
@@ -26,8 +26,6 @@
       (package-install package)))
       myPackages)
 
-;; load the material theme
-(load-theme 'material t)
 
 ;; enable elpy
 (elpy-enable)
@@ -69,3 +67,44 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
+(setq web-mode-engines-alist
+      '(("django"    .  "\\.html\\'"))
+      )
+
+(set-face-attribute 'default            nil :background "grey14" :foreground "ivory1")
+(set-face-attribute 'fringe             nil :background "grey20")
+(set-face-attribute 'highlight          nil :background "grey16")
+(set-face-attribute 'mode-line          nil :box nil :background "grey26" :foreground "grey50")
+(set-face-attribute 'mode-line-inactive nil :background "grey40")
+
+(set-face-attribute 'web-mode-html-tag-face          nil :foreground "#777777")
+(set-face-attribute 'web-mode-html-tag-custom-face   nil :foreground "#8a9db4")
+(set-face-attribute 'web-mode-html-tag-bracket-face  nil :foreground "#aaaaaa")
+(set-face-attribute 'web-mode-html-attr-name-face    nil :foreground "#aaaaaa")
+(set-face-attribute 'web-mode-html-attr-equal-face   nil :foreground "#eeeeee")
+(set-face-attribute 'web-mode-html-attr-value-face   nil :foreground "RosyBrown")
+(set-face-attribute 'web-mode-html-attr-custom-face  nil :foreground "#8a9db4")
+(set-face-attribute 'web-mode-html-attr-engine-face  nil :foreground "#00f5ff")
+(set-face-attribute 'web-mode-comment-face           nil :foreground "Firebrick")
+(set-face-attribute 'web-mode-constant-face          nil :foreground "aquamarine")
+(set-face-attribute 'web-mode-css-at-rule-face       nil :foreground "plum4")
+(set-face-attribute 'web-mode-css-selector-face      nil :foreground "orchid3")
+(set-face-attribute 'web-mode-css-pseudo-class-face  nil :foreground "plum2")
+(set-face-attribute 'web-mode-css-property-name-face nil :foreground "Pink3")
+(set-face-attribute 'web-mode-preprocessor-face      nil :foreground "DarkSeaGreen")
+(set-face-attribute 'web-mode-block-delimiter-face   nil :foreground "DarkSeaGreen")
+(set-face-attribute 'web-mode-block-control-face     nil :foreground "SeaGreen")
+(set-face-attribute 'web-mode-variable-name-face     nil :foreground "Burlywood")
