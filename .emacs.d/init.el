@@ -13,6 +13,8 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
+;; M-x package-refresh-contents RET
+
 (defvar myPackages
   '(better-defaults
     elpy
