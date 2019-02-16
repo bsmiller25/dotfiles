@@ -33,6 +33,7 @@
 (elpy-enable)
 
 ;; auto pep8
+;; pip install autopep8
 (require 'py-autopep8)
 (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 (setq py-autopep8-options '("--max-line-length=79"))
