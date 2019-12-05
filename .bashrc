@@ -14,6 +14,8 @@ fi
 
 force_color_prompt=yes
 
+# add ~/bin to path
+export PATH="$HOME/bin:$PATH"
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
