@@ -52,10 +52,10 @@
 (ido-mode 1)
 
 ;; fix html indentation
-(add-hook 'html-mode-hook
-	  (lambda ()
+;;(add-hook 'html-mode-hook
+;;	  (lambda ()
 	    ;; Default indentation is usually 2 spaces, changing to 4.
-	    (set (make-local-variable 'sgml-basic-offset) 4)))
+;;	    (set (make-local-variable 'sgml-basic-offset) 4)))
 
 
 (custom-set-variables
