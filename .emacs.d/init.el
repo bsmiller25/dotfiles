@@ -57,6 +57,9 @@
 	    ;; Default indentation is usually 2 spaces, changing to 4.
 ;;	    (set (make-local-variable 'sgml-basic-offset) 4)))
 
+
+(setq js-indent-level 2)
+
 (defun my-web-mode-hook ()
   "Hooks for Web mode."
   (setq web-mode-markup-indent-offset 2)
@@ -92,6 +95,8 @@
 (setq web-mode-engines-alist
       '(("django"    .  "\\.html\\'"))
       )
+
+
 
 (set-face-attribute 'default            nil :background "grey14" :foreground "ivory1")
 (set-face-attribute 'fringe             nil :background "grey20")
